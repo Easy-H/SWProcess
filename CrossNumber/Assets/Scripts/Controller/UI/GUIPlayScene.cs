@@ -19,7 +19,7 @@ public class GUIPlayScene : GUICustomFullScreen
 
     public void SetStage()
     {
-        _setter.SetStage();
+        _setter.MakeLevel();
 
         _moves = new CustomStack<MoveData>();
         _checker = new ClearChecker();

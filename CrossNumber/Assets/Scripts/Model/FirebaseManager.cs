@@ -4,25 +4,15 @@ using UnityEngine;
 
 public class FirebaseManager : Singleton<FirebaseManager>
 {
-    /*
-    public void WriteFireStore()
-    {
-        FirebaseFirestore db = FirebaseFirestore.DefaultInstance;
-        DocumentReference docRef = db.Collection("users").Document("alovelace");
-        Dictionary<string, object> user = new Dictionary<string, object>
-{
-        { "First", "Ada" },
-        { "Last", "Lovelace" },
-        { "Born", 1815 },
-};
-        docRef.SetAsync(user).ContinueWithOnMainThread(task => {
-            Debug.Log("Added data to the alovelace document in the users collection.");
-        });
+    public LevelData GetLevelData(string value) {
+        LevelData retval = null;
+
+        // retval을 firebase와통신하여 얻어와야 함
+
+        return retval;
     }
 
-    public void ReadFireStore() { 
-        
+    public void UploadLevel(LevelData data) { 
+        // firebase와 통신하여 현재 레벨을 업로드 함
     }
-
-    */
 }

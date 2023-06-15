@@ -20,7 +20,7 @@ public class GUIBuildScene : GUICustomFullScreen {
     protected override void Open()
     {
         base.Open();
-        _setter.SetStage("Temp");
+        _setter.MakeLevel("Temp");
     }
 
     protected override void Update()
@@ -68,7 +68,7 @@ public class GUIBuildScene : GUICustomFullScreen {
         UnitController selectedUnit = UnitManager.GetUnitControllerAt(pos);
 
         if (selectedUnit)
-            UnitManager.Instance.DestroyUnit(selectedUnit.gameObject);
+            UnitManager.Instance.DestroyUnit(selectedUnit);
 
         _state = MotionState.Idle;
         _buildState = BuildState.Idle;

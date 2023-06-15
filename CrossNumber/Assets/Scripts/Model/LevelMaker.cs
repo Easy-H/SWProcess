@@ -15,7 +15,7 @@ public class LevelMaker : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    public void SetStage() {
+    public void MakeLevel() {
         LevelData stage;
         if (!_testScene)
             stage = StageManager.Instance.GetStageData();
@@ -26,7 +26,7 @@ public class LevelMaker : MonoBehaviour
         _CreateWorld(stage);
     }
 
-    public void SetStage(string value)
+    public void MakeLevel(string value)
     {
         LevelData stage = StageManager.Instance.GetStageData(value);
 

@@ -85,8 +85,9 @@ public class UnitManager : Singleton<UnitManager> {
         return unit;
     }
 
-    public void DestroyUnit(GameObject obj)
+    public void DestroyUnit(UnitController obj)
     {
+        _units.Remove(obj.GetData());
         Object.Destroy(obj);
     }
 
